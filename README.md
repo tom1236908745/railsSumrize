@@ -34,8 +34,10 @@ viewsフォルダに配置される。
 
 ### コントローラ
 ビューはコントローラを介して表示される。
+( app/controllers/home_controller.rb )
 
 ### ルーティング
 ブラウザとコントローラを繋ぐのがルーティング
+( app/config/routes.rb )
 
 ルーティング　→　コントローラ　→ ビュー
