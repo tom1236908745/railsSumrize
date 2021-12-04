@@ -11,7 +11,7 @@
 
 
 
-1. 
+3. 
 データベースに変更を指示するためのファイル
 ```
 rails g model Post カラム名:type
@@ -19,7 +19,7 @@ rails g model Post カラム名:type
 ```
 db/migrate以下にマイグレーションファイルが作成される。
 
-2.
+4.
 ```
 rails db:migrate
 ```
