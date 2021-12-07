@@ -2,6 +2,6 @@
 
 ```ruby
 def update
-  redirect_to("/posts/index")
+  redirect_to("/遷移先のURL")
 end
 ```
