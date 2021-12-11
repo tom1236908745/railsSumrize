@@ -70,3 +70,17 @@ def update
   render("posts/edit") // editアクションを経由せずにedit.html.erbを直接表示出来る。
 end
 ```
+
+### バリデーションメッセージ
+```ruby
+post = Post.new(content: "")
+post.errors.full_messages => []
+post.save => false
+post.errors.messages
+=> ["Contentを入力して下さい"]
+```
+```html
+<%= @post.errors.full_messages.each do |message| %>
+  <%= message %>
+<% end %>
+```
