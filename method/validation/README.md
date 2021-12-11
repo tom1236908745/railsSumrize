@@ -44,3 +44,21 @@ def update
   end
 end
 ```
+
+### リダイレクト後の編集時
+上記の場合、バリデーションに引っ掛かり、リダイレクト後、変更内容が反映されない。
+そこで、リダイレクト後初期値に直前の入力内容を初期値としてフォームに入れる様にする。
+
+```ruby
+def update
+  @post = Post.find_by(id: params[:id])
+  @post.content = params[:content] // 右辺は直前の内容が入っている。
+end
+```
+```html
+<textarea>
+  <%= @post.content %>
+</textarea>
+```
+
+上記の様にupdate関数から、```post/edit.html.erb```に@postを利用出来る様にすれば良い。
