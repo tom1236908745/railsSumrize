@@ -62,3 +62,11 @@ end
 ```
 
 上記の様にupdate関数から、```post/edit.html.erb```に@postを利用出来る様にすれば良い。
+
+```ruby
+def update
+  @post = Post.find_by(id: params[:id])
+  @post.content = params[:content] // 右辺は直前の内容が入っている。
+  render("posts/edit") // editアクションを経由せずにedit.html.erbを直接表示出来る。
+end
+```
