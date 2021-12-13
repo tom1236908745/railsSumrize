@@ -7,3 +7,14 @@
   </div>
 <% end %>
 ```
+
+### フォームで
+
+```ruby
+<%= form_tag("/posts/#{@post.id}/update") do %>
+  <div>
+    <textarea></textarea>
+    <input type="submit" value="保存">
+  </div>
+<% end %>
+```
