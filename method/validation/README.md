@@ -7,7 +7,6 @@
 class Post < ApplicationRecord
   validates :検証するカラム名, {presence: true} // 第二引数は空の投稿を防ぐバリデーション
 end
-
 ``` 
 
 ### 文字数制限
@@ -16,7 +15,12 @@ class Post < ApplicationRecord
   validates :検証するカラム名, {length: {maximum: 文字数}} // lengthを指定
 end
 ```
-
+### すでにデータベースにある物を除外
+```ruby
+class Post < ApplicationRecord
+  validates :検証するカラム名, {uniqueness: true}
+end
+```
 ### 合体
 ```ruby
 class Post < ApplicationRecord
